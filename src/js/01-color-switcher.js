@@ -13,11 +13,13 @@ let intervalId = null;
 
 function stopToChangeColor() {
     clearInterval(intervalId);
-    refs.startBtn.style.disabled = false;
+    refs.startBtn.disabled = false;
+    refs.stopBtn.disabled = true;
 };
 
 function startToChangeColor() {
-    refs.startBtn.style.disabled = true;
+    refs.startBtn.disabled = true;
+    refs.stopBtn.disabled = false;
     intervalId = setInterval(() => {
         document.body.style.backgroundColor = getRandomHexColor();
     }, 1000);

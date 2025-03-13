@@ -36,8 +36,7 @@ function startCountBack() {
     
     refs.startBtn.disabled = true;    
     countdownInterval = setInterval(() => {
-        debugger;
-        currentDate = new Date();
+        const currentDate = new Date();
         const timeToCount = selectedDate - currentDate;
         if (timeToCount <= 0) {
             clearInterval(countdownInterval);
